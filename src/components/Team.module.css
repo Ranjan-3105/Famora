@@ -1,0 +1,77 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.imageWrapper {
+  height: 250px;
+  width: 100%;
+}
+
+.info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-dark);
+}
+
+.role {
+  color: var(--color-pink-dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.details {
+  text-align: left;
+  font-size: 0.875rem;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.detailItem {
+  margin-bottom: 0.5rem;
+}
+
+.detailItem strong {
+  color: var(--color-dark);
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: var(--color-soft-blue);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-dark);
+}
+
+.star {
+  color: #f59e0b; /* yellow */
+}

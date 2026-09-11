@@ -1,0 +1,102 @@
+.widgetContainer {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.googleIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4285F4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.aggregate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rating {
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.stars {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.starFilled {
+  color: #f59e0b;
+}
+
+.starHalf {
+  color: #f59e0b;
+  opacity: 0.5;
+}
+
+.count {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.placeholderNotice {
+  background: var(--gradient-accent);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-pink-accent);
+}
+
+.placeholderNotice p {
+  font-weight: 600;
+  color: var(--color-pink-dark);
+}
+
+.placeholderNotice .sub {
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  color: var(--color-text-main);
+}

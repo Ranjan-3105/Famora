@@ -1,0 +1,61 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.offerCard {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(190, 24, 93, 0.3); /* Pink dash border for tickets/offers */
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.offerCard:hover {
+  transform: translateY(-5px);
+}
+
+.highlighted {
+  border-style: solid;
+  border-color: var(--color-pink-accent);
+  box-shadow: var(--shadow-md);
+  background: var(--gradient-accent);
+}
+
+.iconWrapper {
+  color: var(--color-pink-dark);
+  margin-bottom: 1rem;
+  display: inline-flex;
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+.desc {
+  font-size: 0.875rem;
+  color: var(--color-text-main);
+  margin-bottom: 1.5rem;
+}
+
+.tnc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+}

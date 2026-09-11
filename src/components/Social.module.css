@@ -1,0 +1,58 @@
+.socialSection {
+  background-color: var(--color-white);
+  padding-bottom: var(--spacing-xxl);
+}
+
+.header {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.post {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(190, 24, 93, 0.6); /* pink dark with opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.post:hover .overlay {
+  opacity: 1;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
