@@ -1,12 +1,13 @@
 import styles from "./About.module.css";
+import Image from "next/image";
 
 export default function About() {
   return (
     <section id="about" className="section">
       <div className={`container ${styles.grid}`}>
         <div className={styles.imageCol}>
-          <div className={`img-placeholder ${styles.image}`}>
-            <span>[Salon Interior Placeholder]</span>
+          <div className={styles.image}>
+            <Image src="/images/interior.png" alt="Salon Interior" fill style={{ objectFit: 'cover', borderRadius: 'var(--radius-lg)' }} />
           </div>
           <div className={styles.experienceBadge}>
             <span className={styles.badgeNumber}>10+</span>

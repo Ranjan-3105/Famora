@@ -1,13 +1,14 @@
 import styles from "./Gallery.module.css";
 import { Instagram } from "lucide-react";
+import Image from "next/image";
 
 const galleryItems = [
-  { id: 1, title: "Salon Interior", class: styles.tall },
-  { id: 2, title: "Hair Transformation", class: "" },
-  { id: 3, title: "Bridal Look", class: styles.wide },
-  { id: 4, title: "Nail Art", class: "" },
-  { id: 5, title: "Facial Glow", class: styles.tall },
-  { id: 6, title: "Men's Grooming", class: "" },
+  { id: 1, title: "Salon Interior", class: styles.tall, image: "/images/interior.png" },
+  { id: 2, title: "Hair Transformation", class: "", image: "/images/hair.png" },
+  { id: 3, title: "Bridal Look", class: styles.wide, image: "/images/bridal.png" },
+  { id: 4, title: "Nail Art", class: "", image: "/images/nail.png" },
+  { id: 5, title: "Facial Glow", class: styles.tall, image: "/images/facial.png" },
+  { id: 6, title: "Men's Grooming", class: "", image: "/images/mens.png" },
 ];
 
 export default function Gallery() {
@@ -28,10 +29,8 @@ export default function Gallery() {
 
         <div className={styles.masonry}>
           {galleryItems.map((item) => (
-            <div key={item.id} className={`${styles.item} ${item.class}`}>
-              <div className="img-placeholder" style={{ borderRadius: "var(--radius-md)" }}>
-                <span>[{item.title}]</span>
-              </div>
+            <div key={item.id} className={`${styles.item} ${item.class}`} style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--radius-md)' }}>
+              <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} />
             </div>
           ))}
         </div>

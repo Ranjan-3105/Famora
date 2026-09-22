@@ -1,10 +1,24 @@
+"use client";
+import { useState, useEffect } from "react";
 import styles from "./Hero.module.css";
 import { MessageCircle, Calendar } from "lucide-react";
 
 export default function Hero() {
+  const [opacity, setOpacity] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = window.scrollY;
+      const newOpacity = Math.min(scrollPos / 500, 0.9); // max 0.9 opacity
+      setOpacity(newOpacity);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className={styles.hero}>
-      <div className={styles.overlay}></div>
+      <div className={styles.overlay} style={{ opacity }}></div>
       <div className={`container ${styles.content}`}>
         <h1 className="heading-1 fade-up stagger-1">FAMORA – The Family Salon</h1>
         <h2 className={`heading-2 fade-up stagger-2 ${styles.subhead}`}>

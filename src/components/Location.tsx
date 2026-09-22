@@ -49,7 +49,7 @@ export default function Location() {
             <div className={styles.mapContainer}>
               {/* Embedded Google Maps Placeholder */}
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118227.14088904791!2d84.80164802878482!3d22.215582305593856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2019c4021dd7cd%3A0xc622a57962c0b6fa!2sCivil%20Township%2C%20Rourkela%2C%20Odisha!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=Civil%20Township,%20Rourkela,%20Odisha&t=&z=14&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
