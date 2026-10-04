@@ -9,20 +9,20 @@
   background-color: var(--color-pink-light);
   background-image: url('/images/hero_wide.png');
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
   padding-top: 4rem;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
-  z-index: 1;
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    background-position: center center;
+    background-size: cover;
+  }
 }
+
+
 
 .content {
   position: relative;

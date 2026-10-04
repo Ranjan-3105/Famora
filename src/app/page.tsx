@@ -11,6 +11,7 @@ import Reviews from "../components/Reviews";
 import Social from "../components/Social";
 import FAQ from "../components/FAQ";
 import Location from "../components/Location";
+import BookingApp from "../components/BookingApp";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Reviews />
       <Social />
       <FAQ />
+      <BookingApp />
       <Location />
     </>
   );
